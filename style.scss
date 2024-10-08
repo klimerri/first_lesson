@@ -1,0 +1,186 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    
+}
+
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 32px 0;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(10px);
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            display: block;
+            text-decoration: none;
+            img{
+                width: 118px;
+            }
+        }
+
+        .link{
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .link:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.background{
+    background-color: #D9D9D9;
+    height: 140px;
+}
+
+.main {
+    margin-top: 30px;
+    .left-side { 
+        .teacher-icon{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+
+        .teacher-name{
+            font-size: 34px;
+            font-weight: 700;
+            margin-top: 25px;
+        } 
+
+        .button-start {
+            border: none;
+            background-color: #000;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 50px;
+            padding: 15px 35px;
+            margin-top: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s linear;
+        }
+
+        .button-start:hover {
+            background-color: #FF9130;
+            color: #000;
+        }
+
+        .tag__list {
+            margin-top: 27px;
+            display: flex;
+            gap: 12px;
+
+            .tag__item {
+                border-radius: 8px;
+                padding: 6px 16px;
+                font-size: 12px;
+                font-weight: 400;
+                color: #000;
+                background-color: #A7AEB833;
+            }
+        }
+
+        .about-myself {
+            margin-top: 25px;
+            width: 80%;
+
+            &__header {
+                color: #A8A8A8;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            &__text {
+                color: #000;
+                font-weight: 400px;
+                font-size: 15px;
+                margin-top: 12px;
+            }
+        }
+
+        .achievements {
+            margin-top: 25px;
+
+            &__header {
+                color:#A8A8A8;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column; 
+                margin-top: 12px;         
+            }
+            
+            &__item{
+                display: flex;
+                gap: 5px;
+                align-items: center;
+
+                &__text {
+                    color: #000;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+}
