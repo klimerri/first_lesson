@@ -62,7 +62,7 @@ body{
         display: flex;
         justify-content: space-between;
         gap: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     &__contacts, &__networks {
@@ -70,7 +70,7 @@ body{
         justify-content: space-between;
         gap: 50px;
         border-top: 1px solid #A7AEB833;
-        padding: 50px 0px;
+        padding: 40px 0px;
     }
 }
 
@@ -92,6 +92,7 @@ body{
             color: #000;
             font-size: 18px;
             font-weight: 600;
+            transition: text-decoration 0.3s linear;
         }
 
         .link:hover{
@@ -101,11 +102,11 @@ body{
 
 .background{
     background-color: #D9D9D9;
-    height: 140px;
+    height: 170px;
 }
 
 .main {
-    margin-top: 30px;
+    margin-top: 45px;
     .left-side { 
         width: 50%;
 
@@ -127,7 +128,7 @@ body{
             color: #fff;
             font-size: 15px;
             font-weight: 50px;
-            padding: 15px 35px;
+            padding: 13px 26px;
             margin-top: 20px;
             border-radius: 30px;
             cursor: pointer;
@@ -165,8 +166,9 @@ body{
             }
 
             &__text {
+                width: 90%;
                 color: #000;
-                font-weight: 400px;
+                font-weight: 400;
                 font-size: 15px;
                 margin-top: 12px;
                 line-height: 20px;
@@ -293,13 +295,13 @@ body{
             &__clients {
                 display: flex;
                 flex-direction: column;
-                margin-top: 15px;
+                margin-top: 25px;
                 border-top: 1px solid #A7AEB833;
 
                 .feedback__client {
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 15px;
+                    margin-top: 25px;
 
                     .client {
                         &__info {
@@ -402,7 +404,7 @@ body{
 }
 
 .footer {
-    padding: 50px 0px 30px 0px;;
+    padding: 40px 0px 30px 0px;;
     border-top: 1px solid #A7AEB833;
     
     .logo{
@@ -415,18 +417,19 @@ body{
 
     .links {
         display: flex;
-        gap: 40px;
+        gap: 30px;
 
         .link {
             font-size: 15px;
             font-weight: 400px;
             color:#A8A8A8;
             text-decoration: none;
-            transition: color 0.3s linear;
+            transition: color 0.3s, underline 0.3s linear;
         }
 
         .link:hover {
             color: #000;
+            text-decoration: underline;
         }
     }
 }

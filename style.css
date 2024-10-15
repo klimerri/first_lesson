@@ -66,14 +66,14 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .container__contacts, .container__networks {
   display: flex;
   justify-content: space-between;
   gap: 50px;
   border-top: 1px solid rgba(167, 174, 184, 0.2);
-  padding: 50px 0px;
+  padding: 40px 0px;
 }
 
 .header {
@@ -94,6 +94,9 @@ body {
   color: #000;
   font-size: 18px;
   font-weight: 600;
+  transition: -webkit-text-decoration 0.3s linear;
+  transition: text-decoration 0.3s linear;
+  transition: text-decoration 0.3s linear, -webkit-text-decoration 0.3s linear;
 }
 .header .link:hover {
   text-decoration: underline;
@@ -101,11 +104,11 @@ body {
 
 .background {
   background-color: #D9D9D9;
-  height: 140px;
+  height: 170px;
 }
 
 .main {
-  margin-top: 30px;
+  margin-top: 45px;
 }
 .main .left-side {
   width: 50%;
@@ -126,7 +129,7 @@ body {
   color: #fff;
   font-size: 15px;
   font-weight: 50px;
-  padding: 15px 35px;
+  padding: 13px 26px;
   margin-top: 20px;
   border-radius: 30px;
   cursor: pointer;
@@ -158,8 +161,9 @@ body {
   font-size: 15px;
 }
 .main .left-side .about-myself__text {
+  width: 90%;
   color: #000;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 15px;
   margin-top: 12px;
   line-height: 20px;
@@ -264,13 +268,13 @@ body {
 .main .right-side .feedback__clients {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 25px;
   border-top: 1px solid rgba(167, 174, 184, 0.2);
 }
 .main .right-side .feedback__clients .feedback__client {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .main .right-side .feedback__clients .feedback__client .client__info {
   display: flex;
@@ -354,7 +358,7 @@ body {
 }
 
 .footer {
-  padding: 50px 0px 30px 0px;
+  padding: 40px 0px 30px 0px;
   border-top: 1px solid rgba(167, 174, 184, 0.2);
 }
 .footer .logo {
@@ -366,15 +370,16 @@ body {
 }
 .footer .links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 .footer .links .link {
   font-size: 15px;
   font-weight: 400px;
   color: #A8A8A8;
   text-decoration: none;
-  transition: color 0.3s linear;
+  transition: color 0.3s, underline 0.3s linear;
 }
 .footer .links .link:hover {
   color: #000;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
