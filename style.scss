@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,10 +56,21 @@ body{
     width: 100%;
     margin: 0 auto;
 
+    @media(max-width: 1100px){
+        padding: 15px;
+    }
+
     &__header, &__footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__footer {
+        @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
 
     &__main {
@@ -63,14 +78,23 @@ body{
         justify-content: space-between;
         gap: 50px;
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-bottom: 20px;
+            gap: 25px;
+        }
     }
 
     &__contacts, &__networks {
         display: flex;
         justify-content: space-between;
         gap: 50px;
-        border-top: 1px solid #A7AEB833;
-        padding: 40px 0px;
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 }
 
@@ -79,11 +103,19 @@ body{
     background: rgba(255, 255, 255, 0.60);
     backdrop-filter: blur(10px);
 
+    @media (max-width: 375px) {
+        padding: 25px 0px;
+    }
+
         .logo{
             display: block;
             text-decoration: none;
             img{
                 width: 118px;
+
+                @media (max-width: 375px) {
+                    width: 105px;
+                }
             }
         }
 
@@ -93,6 +125,10 @@ body{
             font-size: 18px;
             font-weight: 600;
             transition: text-decoration 0.3s linear;
+
+            @media (max-width: 375px) {
+                font-size: 16px;
+            }
         }
 
         .link:hover{
@@ -107,19 +143,45 @@ body{
 
 .main {
     margin-top: 45px;
+
+    @media (max-width: 768px){
+        margin-top: 25px;
+    }
+    
     .left-side { 
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%
+        }
+
+        .teacher-info{
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
         .teacher-icon{
             width: 180px;
             height: 180px;
             border-radius: 50%;
+
+            @media (max-width: 450px) {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         .teacher-name{
             font-size: 34px;
             font-weight: 700;
             margin-top: 25px;
+
+            @media (max-width: 768px) {
+                text-align: center;
+            }
         } 
 
         .button-start {
@@ -127,12 +189,16 @@ body{
             background-color: #000;
             color: #fff;
             font-size: 15px;
-            font-weight: 50px;
+            font-weight: 500;
             padding: 13px 26px;
             margin-top: 20px;
             border-radius: 30px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s linear;
+
+            @media (max-width: 450px) {
+                padding: 9px 22px;
+            }
         }
 
         .button-start:hover {
@@ -144,6 +210,11 @@ body{
             margin-top: 27px;
             display: flex;
             gap: 12px;
+
+            @media (max-width: 400px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
             .tag__item {
                 border-radius: 8px;
@@ -172,6 +243,10 @@ body{
                 font-size: 15px;
                 margin-top: 12px;
                 line-height: 20px;
+
+                @media (max-width: 768px) {
+                    width: 100%
+                }
             }
         }
 
@@ -212,6 +287,10 @@ body{
     .right-side{
         width: 50%;
 
+        @media (max-width: 768px) {
+            width: 100%
+        }
+
         .video {
             background-color: #D9D9D9;
             width: 100%;
@@ -232,6 +311,11 @@ body{
                 margin-top: 15px;
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 375px) {
+                    flex-direction: column;
+                    gap: 15px;
+                }
                 
                 &-number{
                     font-size: 50px;
@@ -280,6 +364,10 @@ body{
                     border: none; 
                     height: 6px; 
 
+                    @media (max-width: 375px) {
+                        width: 100%;
+                    }
+
                     &::-webkit-progress-bar {
                         background-color: #A7AEB833;
                         border-radius: 30px;
@@ -302,6 +390,11 @@ body{
                     display: flex;
                     justify-content: space-between;
                     margin-top: 25px;
+
+                    @media (max-width: 500px) {
+                        flex-direction: column;
+                    }
+
 
                     .client {
                         &__info {
@@ -352,6 +445,11 @@ body{
                 flex-direction: column;
                 width: 60%;
                 align-items: left;
+
+                @media (max-width: 500px) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
             }
 
             &__text {
@@ -363,17 +461,32 @@ body{
         }
     }
     .contact, .network {
+        border-top: 1px solid #A7AEB833;
+        padding: 40px 0px;
+
+        @media (max-width: 650px) {
+            padding: 20px 0px;
+        }
+
         &__header {
             width: 50%;
             font-size: 28px;
             font-weight: 600;
             color: #000;
+
+            @media (max-width: 650px) {
+                width: 100%;
+            }
         }
 
         &__info {
             width: 50%;
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 650px) {
+                width: 100%;
+            }
         }
 
         &__text {
@@ -382,11 +495,20 @@ body{
             font-weight: 400;
             width: 80%;
             margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                width: 100%
+            }
         }
 
         &__links {
             display: flex;
             gap: 25px;
+
+            @media (max-width: 500px) {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         &__mail, &__link {
@@ -404,20 +526,37 @@ body{
 }
 
 .footer {
-    padding: 40px 0px 30px 0px;;
+    padding: 40px 0px 30px 0px;
     border-top: 1px solid #A7AEB833;
+
+    @media (max-width: 650px) {
+        padding: 20px 0px 10px 0px;
+    }
     
     .logo{
         display: block;
         text-decoration: none;
         img{
             width: 118px;
+
+            @media (max-width: 375px) {
+                width: 105px;
+            }
         }
     }
 
     .links {
         display: flex;
         gap: 30px;
+
+        @media (max-width: 650px) {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            gap: 15px;
+        }
 
         .link {
             font-size: 15px;
