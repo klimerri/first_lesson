@@ -363,7 +363,7 @@ body {
   border-radius: 30px;
 }
 .main .right-side .feedback__ratings progress::-webkit-progress-value {
-  background-color: #F99253;
+  background-color: rgba(249, 146, 83, 0.6);
   border-radius: 30px;
 }
 .main .right-side .feedback__clients {
